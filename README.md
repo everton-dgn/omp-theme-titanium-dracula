@@ -10,8 +10,8 @@ surface so HTML transcripts keep the same colors.
 
 The status line uses vertical pipe separators, keeps persistent fields text-first, and preserves
 icons for conditional modes such as Plan, Prewalk, Vibe, Loop, Pause, and Goal. Fast mode uses a
-Dracula-yellow lightning bolt; auto thinking and auto-compaction stay icon-free.
-Background-job counts stay hidden, and agent counts remain text-only while Vibe keeps its icon.
+Dracula-yellow Nerd Font lightning bolt; auto thinking and auto-compaction stay icon-free.
+Background-job and agent counts stay hidden while Vibe keeps its icon.
 
 ## Install
 
@@ -27,7 +27,8 @@ omp config set theme.dark titanium-dracula
 Or pick it from `/theme` inside omp once the file is in place. The file name is what omp
 matches on, so keep it as `titanium-dracula.json`.
 
-Nerd Font glyphs are optional; conditional mode indicators still follow the active `symbolPreset`.
+A Nerd Font is required for the fixed Fast indicator; other conditional mode indicators still
+follow the active `symbolPreset`.
 
 ## Upstream
 
