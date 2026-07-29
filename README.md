@@ -11,7 +11,8 @@ surface so HTML transcripts keep the same colors.
 The status line uses vertical pipe separators, keeps persistent fields text-first, and preserves
 icons for conditional modes such as Plan, Prewalk, Vibe, Loop, Pause, and Goal. Fast mode uses a
 Dracula-yellow Nerd Font lightning bolt; auto thinking and auto-compaction stay icon-free.
-Background-job and agent counts stay hidden while Vibe keeps its icon.
+The background-job counter keeps the icon of the active preset, while the subagent count and
+the Vibe label render without one.
 
 ## Install
 
@@ -30,11 +31,17 @@ matches on, so keep it as `titanium-dracula.json`.
 A Nerd Font is required for the fixed Fast indicator; other conditional mode indicators still
 follow the active `symbolPreset`.
 
+The thinking labels carry their own truecolor escape sequence, which keeps them in a muted gray
+instead of inheriting the model color. Two consequences are worth knowing: on a terminal that
+falls back to 256 colors, such as `TERM=linux` or `TERM=dumb`, those labels keep emitting
+truecolor; and `statusLine.compactThinkingLevel` should stay off, because compact mode extracts
+the whole label rather than a single glyph and the model name loses its color.
+
 ## Upstream
 
-The same theme is proposed as a built-in omp theme in
-[PR #6651](https://github.com/can1357/oh-my-pi/pull/6651). If it lands, omp ships it and
-this repository becomes just a mirror for older versions.
+The theme was proposed as a built-in omp theme in
+[PR #6651](https://github.com/can1357/oh-my-pi/pull/6651), which was closed without merging.
+omp does not ship it, so this repository is where the theme lives.
 
 ## Palette
 
